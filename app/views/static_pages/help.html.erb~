@@ -1,0 +1,5 @@
+<% provide(:title, 'Help') %>
+
+<h1>StaticPages#help</h1>
+<p>1.  Do not panic </p>
+<p>2. Start panicing!! </p>
