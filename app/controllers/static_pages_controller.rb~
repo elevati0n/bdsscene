@@ -1,5 +1,8 @@
 class StaticPagesController < ApplicationController
   def home
+   @appointment = Appointment.all 
+  end
+
   end
 
   def help
@@ -10,4 +13,4 @@ class StaticPagesController < ApplicationController
 	
   def contact 
   end 
-end
+

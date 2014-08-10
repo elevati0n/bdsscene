@@ -1,5 +1,5 @@
 <% provide(:title, @user.firstName) %>
-<h1> PUT XML HERE </h1>
+<h1> PROFILE </h1>
 <div class="row">
   <aside class="span4">
     <section>
@@ -9,12 +9,45 @@
 </div> 
 <p>
 
-XML FIRST NAME <%= @user.firstName %>, /XML First NAME>
+first name : <%= @user.firstName %>, 
 
 <p> <p>
  <%= @user.lastName %>,
 
  <%= @user.emailAddress %>, <%= @user.phoneNumber %> 
+
+  <div class="span8">
+    <% if @user.appointments.any? %>
+      <h3>Appointments (<%= @user.appointments.count %>)</h3>
+      <ol class="appointments">
+        <%= render @appointments %>
+      </ol>
+        <% @user.appointments.each do |appointment| %>
+    <li>
+      <%= appointment.day %> <%=  %> 
+    </li>
+  <% end %>
+    <% end %>
+
+<%= form_for(@appointments) do |f|%>
+    <div class="field">
+    <%= f.text_area :startTime, placeholder: "New appointment Start Time" %>
+    <%= f.text_area :endTime, placeholder: "End Time" %>
+    <%= f.text_area :day, placeholder: "Day" %> 
+    <%= f.text_area :user_id, placeholder: "id"%>
+    <%= f.text_area :status, placeholder: "pending" %>
+    <%= f.text_area :hour, placeholder: "hour" %>
+
+
+
+    
+
+
+	
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>
+
 
 
 
