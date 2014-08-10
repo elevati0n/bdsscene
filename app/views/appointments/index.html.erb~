@@ -1,0 +1,91 @@
+<% provide(:title, 'Appointments') %>
+<h1>All Appointments</h1>
+<all>
+<ul class="users">
+
+<% @appointments = Appointment.all %>
+  <% @appointments.each do |appointment| %>
+
+<ul>
+	<li>
+	<appointment>
+	<b> Date: </b>	<month> <%= appointment.month %> </month>
+	<day> <%= appointment.day %></day>
+	<year>  <%= appointment.year %> </year>
+	<b> Start Time: </b>		<startTime> <%= appointment.startTime %> </startTime>
+	<b> End Time: </b>	        <endTime> <%= appointment.endTime %> </endTime>
+	<b> Status: </b>		<status> <%= appointment.status %> </status>
+	</appointment>
+	
+</ul>
+
+  <% end %>
+</all>
+
+<h1> Pending Appointments</h1>
+<pending>
+<ul class="users">
+
+<% @appointments = (Appointment.where(status: "pending")) %>
+  <% @appointments.each do |appointment| %>
+
+<ul>
+	<li>
+	<appointment>
+	<b> Date: </b>	<month> <%= appointment.month %> </month>
+	<day> <%= appointment.day %></day>
+	<year>  <%= appointment.year %> </year>
+	<b> Start Time: </b>		<startTime> <%= appointment.startTime %> </startTime>
+	<b> End Time: </b>	        <endTime> <%= appointment.endTime %> </endTime>
+	<b> Status: </b>		<status> <%= appointment.status %> </status>
+	</appointment>
+	
+</ul>
+
+  <% end %>
+
+</pending>
+
+<h1> Booked Appointments</h1>
+<booked>
+
+<ul class="users">
+<% @appointments = (Appointment.where(status: "booked")) %>
+  <% @appointments.each do |appointment| %>
+	<ul>
+		<li>
+	<appointment> 
+		<startTime> <%= appointment.startTime %> </startTime>
+		<endTime> <%= appointment.endTime %> </endTime>
+		<day> <%= appointment.day %></day>
+		<month> <%= appointment.month %></month>
+		<year> <%= appointment.year %> </year>		
+	</appointment>
+		</li>
+	</ul>
+  <% end %>
+</booked>
+
+<h1> Free Appointments</h1>
+<free>
+<ul class="users">
+<% @appointments = (Appointment.where(status: "free")) %>
+  <% @appointments.each do |appointment| %>
+<ul>
+	<li>
+	<appointment>
+	<b> Date: </b>	<month> <%= appointment.month %> </month>
+	<day> <%= appointment.day %></day>
+	<year>  <%= appointment.year %> </year>
+	<b> Start Time: </b>		<startTime> <%= appointment.startTime %> </startTime>
+	<b> End Time: </b>	        <endTime> <%= appointment.endTime %> </endTime>
+	<b> Status: </b>		<status> <%= appointment.status %> </status>
+	</appointment>
+	
+</ul>
+  <% end %>
+</free>
+
+
+
+

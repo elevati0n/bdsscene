@@ -1,5 +1,5 @@
 <% provide(:title, @user.firstName) %>
-<h1> PROFILE </h1>
+<h1> Profile </h1>
 <div class="row">
   <aside class="span4">
     <section>
@@ -9,43 +9,49 @@
 </div> 
 <p>
 
-first name : <%= @user.firstName %>, 
+<user>
 
-<p> <p>
- <%= @user.lastName %>,
+<firstName> <%= @user.firstName %> </firstName>
+<lastName> <%= @user.lastName %> </lastName>
+<user_id> <%= @user.id.to_s %> </user_id>
+<emailAddress> <%= @user.emailAddress%> </emailAddress>
+<phoneNumber> <%=@user.phoneNumber%> </phoneNumber>
 
- <%= @user.emailAddress %>, <%= @user.phoneNumber %> 
+</user>
+
 
   <div class="span8">
     <% if @user.appointments.any? %>
       <h3>Appointments (<%= @user.appointments.count %>)</h3>
       <ol class="appointments">
-        <%= render @appointments %>
-      </ol>
         <% @user.appointments.each do |appointment| %>
-    <li>
-      <%= appointment.day %> <%=  %> 
-    </li>
+	<appointment> 
+	<ul>
+	<b> Date: </b>	<month> <%= appointment.month %> </month>
+	<day> <%= appointment.day %></day>
+	<year>  <%= appointment.year %> </year>
+	<b> Start Time: </b>		<startTime> <%= appointment.startTime %> </startTime>
+	<b> End Time: </b>	        <endTime> <%= appointment.endTime %> </endTime>
+	<b> Status: </b>		<status> <%= appointment.status %> </status>
+		</appointment>
+	</ul>
+
   <% end %>
     <% end %>
-
+    </ol>
+<h1> Request New Appointment </h1>
 <%= form_for(@appointments) do |f|%>
     <div class="field">
-    <%= f.text_area :startTime, placeholder: "New appointment Start Time" %>
+    <%= f.text_area :startTime, placeholder: "Start Time" %>
     <%= f.text_area :endTime, placeholder: "End Time" %>
+    <%= f.text_area :month, placeholder: "Month" %>
     <%= f.text_area :day, placeholder: "Day" %> 
+    <%= f.text_area :year, placeholder: "Year" %> 
     <%= f.text_area :user_id, placeholder: "id"%>
     <%= f.text_area :status, placeholder: "pending" %>
-    <%= f.text_area :hour, placeholder: "hour" %>
-
-
-
-    
-
-
 	
   </div>
-  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+  <%= f.submit "Request New Appointment!", class: "btn btn-large btn-primary" %>
 <% end %>
 
 

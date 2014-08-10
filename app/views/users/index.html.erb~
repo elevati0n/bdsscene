@@ -1,0 +1,18 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+<user>
+
+<b> First Name :  </b> <firstName> <%= user.firstName %> </firstName>
+<b> Last Name : </b> <lastName> <%= user.lastName %> </lastName>
+<b> User ID : </b> <user_id> <%= user.id.to_s %> </user_id>
+<b> Email Address : </b> <emailAddress> <%= user.emailAddress%> </emailAddress>
+<b> Phone Number : </b> <phoneNumber> <%=user.phoneNumber%> </phoneNumber>
+
+</user>
+    </li>
+  <% end %>
+</ul>
