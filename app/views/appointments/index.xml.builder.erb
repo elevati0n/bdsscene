@@ -1,0 +1,8 @@
+xml.instruct!
+xml.appointments do 
+<% @appointments = Appointment.all %>
+	<% @appointments.each do |appointment| %>
+		xml.startTime appointment.startTime
+	end
+end
+

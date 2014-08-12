@@ -27,7 +27,7 @@ end
   end
 
   def show 
-	@appointment = Appointments.all
+	@appointment = Appointments.
   end 
 
   private
