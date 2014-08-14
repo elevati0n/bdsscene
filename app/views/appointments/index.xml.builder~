@@ -12,8 +12,8 @@ xml.all do
 		xml.status appointment.status
 		xml.startTime appointment.startTime
 		xml.endTime appointment.endTime
-		xml.day appointment.day
 		xml.month appointment.month
+		xml.day appointment.day
 		xml.year appointment.year
 		end
 	end 

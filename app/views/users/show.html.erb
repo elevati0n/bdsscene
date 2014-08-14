@@ -25,6 +25,7 @@
       <h3>Appointments (<%= @user.appointments.count %>)</h3>
       <ol class="appointments">
         <% @user.appointments.each do |appointment| %>
+
 	<appointment> 
 	<ul>
 	<b> Date: </b>	<month> <%= appointment.month %> </month>
@@ -33,7 +34,7 @@
 	<b> Start Time: </b>		<startTime> <%= appointment.startTime %> </startTime>
 	<b> End Time: </b>	        <endTime> <%= appointment.endTime %> </endTime>
 	<b> Status: </b>		<status> <%= appointment.status %> </status>
-		</appointment>
+	</appointment>
 	</ul>
 
   <% end %>
@@ -49,6 +50,7 @@
     <%= f.text_area :year, placeholder: "Year" %> 
     <%= f.text_area :user_id, placeholder: "id"%>
     <%= f.text_area :status, placeholder: "pending" %>
+
 	
   </div>
   <%= f.submit "Request New Appointment!", class: "btn btn-large btn-primary" %>

@@ -16,7 +16,7 @@ class AppointmentsController < ApplicationController
 #      redirect_to :action => :show
 
 end
-  end
+  
  
  def index
     @appointment = Appointments.all
@@ -24,6 +24,9 @@ end
 
 
   def destroy
+    @appointment = Appointments.find(params[:id])
+    @appointment.delete
+    redirect_to appointments_path
   end
 
   def show 
@@ -35,4 +38,5 @@ end
     def appointment_params
       params.require(:appointment).permit(:startTime, :endTime, :day, :month, :year, :status, :user_id)
     end
+end
 

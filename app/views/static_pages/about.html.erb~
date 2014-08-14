@@ -1,15 +1,13 @@
 <% provide(:title, 'About Us') %>
 <h1>About Us</h1>
-<p>
-  Sean David and Robert make the best Apps, because we had the best Software Engineering Teacher so you should hire us and give us lots of money $$$$ =D
-</p>
 
+<style>
 body {
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzD3QKpjVqHusnwySCS0KSoGtwpHiR7VqzFAEMWD_YG9HTdTy6);
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: 200px 150px;
-    margin-right: 300px;
+    background-size: 400px 300px;
+    margin-right: 30px;
 }
 /* unvisited link */
 a:link {
@@ -33,6 +31,7 @@ div.ex {
 
     //border: 10px solid gray;
     margin-left: 50px;
+    font-size:14px;
 }
 div.ex2 {
     width: 750px;
@@ -53,9 +52,11 @@ div.ex3 {
 </head>
 <body>
 <div class="ex">
-<h3>
-Empire Solution's misison improve communication between connect business owners with their customers
-</h3>
+<h4>
+DSR Solutions mission is to improve business communication.  
+<div> 
+Connecting business owners with their customers since 2014
+</h4>
 </div>
 
 <div class="ex2">

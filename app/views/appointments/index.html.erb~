@@ -15,6 +15,9 @@
 	<b> Start Time: </b>		<startTime> <%= appointment.startTime %> </startTime>
 	<b> End Time: </b>	        <endTime> <%= appointment.endTime %> </endTime>
 	<b> Status: </b>		<status> <%= appointment.status %> </status>
+	    <%= link_to "delete", appointment, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: appointment.startTime %>
 	</appointment>
 	
 </ul>
@@ -52,17 +55,18 @@
 <ul class="users">
 <% @appointments = (Appointment.where(status: "booked")) %>
   <% @appointments.each do |appointment| %>
-	<ul>
-		<li>
-	<appointment> 
-		<startTime> <%= appointment.startTime %> </startTime>
-		<endTime> <%= appointment.endTime %> </endTime>
-		<day> <%= appointment.day %></day>
-		<month> <%= appointment.month %></month>
-		<year> <%= appointment.year %> </year>		
+<ul>
+	<li>
+	<appointment>
+	<b> Date: </b>	<month> <%= appointment.month %> </month>
+	<day> <%= appointment.day %></day>
+	<year>  <%= appointment.year %> </year>
+	<b> Start Time: </b>		<startTime> <%= appointment.startTime %> </startTime>
+	<b> End Time: </b>	        <endTime> <%= appointment.endTime %> </endTime>
+	<b> Status: </b>		<status> <%= appointment.status %> </status>
 	</appointment>
-		</li>
-	</ul>
+	
+</ul>
   <% end %>
 </booked>
 

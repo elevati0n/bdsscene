@@ -1,14 +1,13 @@
 <% provide(:title, 'Home') %>
-<h1>Appointment App</h1>
-
-<h1>Home</h1>
 
 <div class="center hero-unit">
-  <h1>Welcome to the Appointment App Home Page!!</h1>
+  <h2>DSR Solutions Presents</h2>
 
-  <h2>
-    This is the home page for the prototype of our application.
-  </h2>
+  <h1>
+    Book'T Appointment </h1><h3>Management Platform
+  </h3>
 
- <%= link_to "Sign up now!", '/signup', class: "btn btn-large btn-primary" %>
+ <%= link_to "Sign in", '/signin', class: "btn btn-large btn-primary" %><br>
+ <%= link_to "Sign up now", '/signup', class: "btn btn-large btn-primary" %>
+
 </div>

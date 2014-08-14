@@ -1,16 +1,70 @@
 <% provide(:title, 'Contact') %>
 <h1>Contact</h1>
+<style>
+#para1 {
+    text-align: center;
+    color: red;
+}
+body {
+    background-image: url(http://www.tassc.org/sites/default/files/email%20clipart.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 200px 150px;
+    margin-right: 300px;
+}
+/* unvisited link */
+a:link {
+    color: #003366;
+}
+
+/* visited link */
+a:visited {
+    color: #003366;
+}
+
+/* mouse over link */
+a:hover {
+    color: #66B2FF;
+}
+
+
+div.ex {
+    width: 500px;
+    padding: 20px;
+    //border: 10px solid gray;
+    margin-left: 80px;
+    color: #000000;
+}
+div.ex2 {
+    width: 200px;
+    padding: 10px;
+    //border: 10px solid gray;
+    margin-left: 90px;
+    color: #000000;
+}
+</style>
+</head>
+<body>
+<div class="ex">
+<h3>
+Our Office is located at:
+</h3>
 <p>
-  Contact Ruby on Rails Tutorial about the sample app at the
-  <a href="http://railstutorial.org/contact">contact page</a>.
-</p><% provide(:title, 'Contact') %>
-<h1>Contact</h1>
+Northeastern University<br>
+360 Huntington ave<br>
+Boston,MA 02115</p>
+</div>
+
+<div class="ex2">
 <p>
-  Contact Ruby on Rails Tutorial about the sample app at the
-  <a href="http://railstutorial.org/contact">contact page</a>.
-</p><% provide(:title, 'Contact') %>
-<h1>Contact</h1>
-<p>
-  Contact Ruby on Rails Tutorial about the sample app at the
-  <a href="http://railstutorial.org/contact">contact page</a>.
+For any additional information about the software please contact our customer support
 </p>
+<p><b><a href="mailto:robert23kim@gmail.com">Email Customer Support</a></b></p>
+<br>
+<p>
+To submit a bug report or a thank you letter please contact our software engineering group
+</p>
+<p><b><a href="mailto:kim.ro@husky.neu.edu">Email Software Developers</a></b></p>
+</div>
+</body>
+</html>
