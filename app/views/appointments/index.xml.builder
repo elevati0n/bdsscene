@@ -12,7 +12,6 @@ xml.all do
 		xml.status appointment.status
 		xml.startTime appointment.startTime
 		xml.endTime appointment.endTime
-		xml.month appointment.month
 		xml.day appointment.day
 		xml.year appointment.year
 		end
@@ -27,7 +26,6 @@ xml.pending do
 		xml.startTime appointment.startTime
 		xml.endTime appointment.endTime
 		xml.day appointment.day
-		xml.month appointment.month
 		xml.year appointment.year
 		end
 	end
@@ -41,7 +39,6 @@ xml.free do
 		xml.startTime appointment.startTime
 		xml.endTime appointment.endTime
 		xml.day appointment.day
-		xml.month appointment.month
 		xml.year appointment.year
 end
 end
@@ -54,7 +51,6 @@ xml.booked do
 		xml.startTime appointment.startTime
 		xml.endTime appointment.endTime
 		xml.day appointment.day
-		xml.month appointment.month
 		xml.year appointment.year
 		end
 	end 

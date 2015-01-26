@@ -28,7 +28,7 @@
 
 	<appointment> 
 	<ul>
-	<b> Date: </b>	<month> <%= appointment.month %> </month>
+	<b> Date: </b>	
 	<day> <%= appointment.day %></day>
 	<year>  <%= appointment.year %> </year>
 	<b> Start Time: </b>		<startTime> <%= appointment.startTime %> </startTime>
@@ -45,7 +45,6 @@
     <div class="field">
     <%= f.text_area :startTime, placeholder: "Start Time" %>
     <%= f.text_area :endTime, placeholder: "End Time" %>
-    <%= f.text_area :month, placeholder: "Month" %>
     <%= f.text_area :day, placeholder: "Day" %> 
     <%= f.text_area :year, placeholder: "Year" %> 
     <%= f.text_area :user_id, placeholder: "id"%>

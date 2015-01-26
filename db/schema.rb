@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140810070420) do
 
-  create_table "appointments", force: true do |t|
-    t.string   "month"
+
+  # These are extensions that must be enabled in order to support this database
+
+
+ActiveRecord::Schema.define(version: 0) do
+  enable_extension "plpgsql"
+	  create_table "appointments", force: true do |t|
+    t.string   "hour"
     t.string   "day"
     t.string   "year"
     t.string   "startTime"
@@ -34,5 +39,7 @@ ActiveRecord::Schema.define(version: 20140810070420) do
     t.datetime "updated_at"
     t.string   "password_secure"
   end
-
 end
+
+
+
